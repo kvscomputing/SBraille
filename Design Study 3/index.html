@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Sentence Retention Testing</title> 
+  </head>
+
+<style>
+    h1 {
+    font-size: 100px;
+    }
+    </style>
+ 
+  <body> 
+    <h1 id="text">hello</h1>
+     <button onclick="display()">Start here</button>
+    <script>
+        var sentence = "At the level of semantics, a question is defined by its ability to establish a set of logically possible answers.";
+        var i = 0;
+        var display = function(){
+            if (i < sentence.length) {
+                document.getElementById("text").innerHTML = sentence.charAt(i);
+                i += 1;
+                setTimeout(display, 250);
+            }
+        }
+    </script>
+  </body>
+</html>
